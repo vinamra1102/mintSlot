@@ -19,7 +19,7 @@ export default function HowItWorks() {
 
   return (
     <section id="how-it-works" className="bg-surface py-20 px-6">
-      <div className="max-w-4xl mx-auto">
+      <div id="services" className="max-w-4xl mx-auto">
         <p className="text-xs uppercase tracking-widest text-primary font-semibold text-center">
           How it works
         </p>
