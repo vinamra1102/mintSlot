@@ -2,12 +2,6 @@ import Navbar from '../components/Navbar'
 import CTABanner from '../components/CTABanner'
 import Footer from '../components/Footer'
 
-const team = [
-  { name: 'Arjun Mehta', role: 'Founder & CEO' },
-  { name: 'Priya Sharma', role: 'Head of Product' },
-  { name: 'Rahul Verma', role: 'Lead Engineer' },
-]
-
 export default function About() {
   return (
     <>
@@ -35,23 +29,6 @@ export default function About() {
           </div>
           <div className="bg-border-green rounded-2xl h-72 w-full flex items-center justify-center text-primary-mid text-sm">
             Team photo
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-surface py-20 px-6">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-semibold text-primary-dark text-center">
-            The people behind MintSlot
-          </h2>
-          <div className="mt-12 grid md:grid-cols-3 gap-8">
-            {team.map((member) => (
-              <div key={member.name} className="text-center">
-                <div className="bg-border-green rounded-2xl h-48 w-full" />
-                <p className="text-primary-dark font-semibold mt-4">{member.name}</p>
-                <p className="text-primary-mid text-sm">{member.role}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
