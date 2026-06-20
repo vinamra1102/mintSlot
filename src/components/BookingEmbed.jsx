@@ -13,7 +13,7 @@ export default function BookingEmbed() {
         </p>
         <div className="mt-10 border border-border-green rounded-2xl overflow-hidden">
           <iframe
-            src="https://demoproject.setmore.com"
+            src="https://app.setmore.com/bookingpage/demoproject"
             width="100%"
             height="700"
             frameBorder="0"
