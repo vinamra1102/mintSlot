@@ -1,18 +1,8 @@
 import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
-  const location = useLocation()
-  const isHome = location.pathname === '/'
-
-  const handleServicesClick = (e) => {
-    if (isHome) {
-      e.preventDefault()
-      document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })
-    }
-    setOpen(false)
-  }
 
   return (
     <nav className="sticky top-0 z-50 bg-white border-b border-border-green">
@@ -24,11 +14,6 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center gap-8">
           <Link to="/" className="text-primary-mid text-sm hover:text-primary transition">Home</Link>
-          {isHome ? (
-            <a href="#services" onClick={handleServicesClick} className="text-primary-mid text-sm hover:text-primary transition cursor-pointer">Services</a>
-          ) : (
-            <a href="/#services" onClick={handleServicesClick} className="text-primary-mid text-sm hover:text-primary transition cursor-pointer">Services</a>
-          )}
           <Link to="/about" className="text-primary-mid text-sm hover:text-primary transition">About</Link>
           <Link to="/contact" className="text-primary-mid text-sm hover:text-primary transition">Contact</Link>
         </div>
@@ -52,11 +37,6 @@ export default function Navbar() {
       {open && (
         <div className="md:hidden border-t border-border-green px-6 py-4 space-y-3">
           <Link to="/" className="block text-primary-mid text-sm hover:text-primary transition" onClick={() => setOpen(false)}>Home</Link>
-          {isHome ? (
-            <a href="#services" onClick={handleServicesClick} className="block text-primary-mid text-sm hover:text-primary transition cursor-pointer">Services</a>
-          ) : (
-            <a href="/#services" onClick={handleServicesClick} className="block text-primary-mid text-sm hover:text-primary transition cursor-pointer">Services</a>
-          )}
           <Link to="/about" className="block text-primary-mid text-sm hover:text-primary transition" onClick={() => setOpen(false)}>About</Link>
           <Link to="/contact" className="block text-primary-mid text-sm hover:text-primary transition" onClick={() => setOpen(false)}>Contact</Link>
         </div>
