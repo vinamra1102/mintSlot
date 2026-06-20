@@ -17,7 +17,6 @@ export default function Footer() {
             Quick links
           </h3>
           <Link to="/" className="block text-sm text-primary-mid hover:text-primary mb-2">Home</Link>
-          <Link to="/" className="block text-sm text-primary-mid hover:text-primary mb-2">Services</Link>
           <Link to="/about" className="block text-sm text-primary-mid hover:text-primary mb-2">About</Link>
           <Link to="/contact" className="block text-sm text-primary-mid hover:text-primary mb-2">Contact</Link>
         </div>
