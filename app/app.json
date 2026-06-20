@@ -5,6 +5,10 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "backgroundColor": "#F0FDF4",
+    "plugins": [
+      "expo-splash-screen",
+      "expo-status-bar"
+    ],
     "splash": {
       "backgroundColor": "#F0FDF4"
     },
