@@ -1,28 +1,19 @@
 {
   "expo": {
-    "name": "app",
-    "slug": "app",
+    "name": "MintSlot",
+    "slug": "mintslot",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "ios": {
-      "supportsTablet": true
+    "backgroundColor": "#F0FDF4",
+    "splash": {
+      "backgroundColor": "#F0FDF4"
     },
     "android": {
+      "package": "com.mintslot.app",
+      "versionCode": 1,
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "backgroundColor": "#16A34A"
       }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
-    "plugins": [
-      "expo-status-bar",
-      "expo-splash-screen"
-    ]
+    }
   }
 }
