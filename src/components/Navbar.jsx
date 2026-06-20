@@ -1,8 +1,18 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  const handleBookClick = () => {
+    if (location.pathname === '/') {
+      document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      navigate('/#booking')
+    }
+  }
 
   return (
     <nav className="sticky top-0 z-50 bg-white border-b border-border-green">
@@ -19,9 +29,9 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-4">
-          <a href="#booking" className="bg-primary text-white rounded-full px-5 py-2 text-sm font-semibold hover:bg-primary-dark transition">
+          <button onClick={handleBookClick} className="bg-primary text-white rounded-full px-5 py-2 text-sm font-semibold hover:bg-primary-dark transition">
             Book Now
-          </a>
+          </button>
           <button className="md:hidden text-primary-mid" onClick={() => setOpen(!open)}>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {open ? (
